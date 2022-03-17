@@ -1,9 +1,9 @@
 #include "account.h"
 
 //method to deposit money into the account
-int makeDeposits(int dollars, int cents)
+int makeDeposits(class Money)
 {
-    int depDollars, depCents;
+    int depDollars, depCents, count;
 
     //prompt user for amount to deposit
     std::cout << "How many dollars would you like to deposit: ";
@@ -15,12 +15,16 @@ int makeDeposits(int dollars, int cents)
     //add depositied amount to original balance
     dollars += depDollars;
     cents += depCents;
+
+    //count how many times a deposit is made
+    count += 1;
+    return count;
 }
 
 //mehtod to withdraw money from the account
-int makeWithdrawls(int dollars, int cents)
+int makeWithdrawls(class Money)
 {
-    int withDollars, withCents;
+    int withDollars, withCents, count;
 
     //prompt user for amount to withdraw
     std::cout << "How many dollars would you like to withdraw: ";
@@ -32,4 +36,8 @@ int makeWithdrawls(int dollars, int cents)
     //subtract withdraw amount from original balance
     dollars += depDollars;
     cents += depCents;
+
+    //count how many times a withdrawl is made TODO:(not sure what variable to set this value to)
+    count += 1;
+    return count;
 }

@@ -10,17 +10,18 @@ private:
     int cents, dollars;
 public:
     //Money constructor
-    Money()
+    Money(int c, int d)
     {
-        cents = 0;
-        dollars = 0;
+        cents = c;
+        dollars = d;
     }
 
     //setters and getters prototypes for cents and dollars integers
-    void setCents(int);
     int getCents();
-    void getDollars(int);
     int getDollars();
+
+    //declare friend function
+    friend class Account;
 };
 
 
