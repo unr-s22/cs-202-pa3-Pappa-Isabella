@@ -6,6 +6,9 @@
 
 class Money
 {
+//friend function to override the output stream 
+class Account{ 
+friend std::ostream& operator<<(std::ostream& os, Account p1); 
 private:
     int cents, dollars;
 public:

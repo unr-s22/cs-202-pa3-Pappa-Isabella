@@ -53,6 +53,8 @@ int main()
     class Account account();
     account.money.setDollars(300); //TODO:(dont think these are formatted correctly)
     account.money.setCents(23);
-
+    // Im just messing around with this part to see if I can fix
+    Account p1(300,23);
+    std::cout << account << std::endl;
     return 0;
 }
