@@ -6,15 +6,12 @@
 
 class Money
 {
-//friend function to override the output stream 
-class Account{ 
-friend std::ostream& operator<<(std::ostream& os, Account p1); 
+
 private:
     int cents, dollars;
 public:
     //Money constructor
-    Money(int c, int d)
-    {
+    Money(int c, int d){
         cents = c;
         dollars = d;
     }
@@ -22,6 +19,8 @@ public:
     //setters and getters prototypes for cents and dollars integers
     int getCents();
     int getDollars();
+    
+    Money const operator + (const Money& amt1, const Money& amt2);
 
     //declare friend function
     friend class Account;

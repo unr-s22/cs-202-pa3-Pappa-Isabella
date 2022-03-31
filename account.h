@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <iostream>
+#include "money.h"
 
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
 //this class has a "has-a" relationship with the Money class TODO:(not sure if this is how has-a is established)
-class money;
+
 class Account
 {
 
